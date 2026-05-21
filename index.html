@@ -150,9 +150,37 @@
         .pillar-icon { font-size: 1.4rem; display: block; margin-bottom: 14px; }
         .pillar h4 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; color: var(--sand); margin-bottom: 9px; letter-spacing: 0.02em; }
         .pillar p { font-size: 0.82rem; color: rgba(245,235,214,0.5); font-weight: 300; line-height: 1.75; }
-
-        /* ── ARTISTS ── */
-        .section-artists { background: var(--cream); padding: 80px 5% 90px; position: relative; overflow: hidden; }
+        /* ── ARTIST CLIMAX MODIFIERS ── */
+        /* Fase 1: Pomeriggio (Chiaro, rilassato, acustico) */
+        .card-warmup {
+            background: var(--cream);
+        }
+        /* Fase 2: Tramonto (I colori si scaldano, entra l'aperitivo) */
+        .card-groove {
+            background: #F0DEC1 !important; /* Un crema più caldo e dorato */
+            border-color: var(--terracotta) !important;
+        }
+        .card-groove .artist-num { color: var(--terracotta) !important; }
+        .card-groove .artist-photo::after {
+            background: linear-gradient(to bottom, transparent 40%, rgba(196,96,58,0.4) 100%) !important;
+        }
+        /* Fase 3: Notte (Buio da club, contrasti accesi, cassa dritta) */
+        .card-club {
+            background: var(--espresso) !important; /* Sfondo scuro */
+            border-color: var(--terracotta) !important;
+            color: var(--cream) !important;
+            box-shadow: 0 20px 40px rgba(30,14,8,0.25);
+        }
+        .card-club h3 { color: var(--sand) !important; }
+        .card-club p { color: rgba(245,235,214,0.7) !important; }
+        .card-club .artist-num { color: var(--sand) !important; opacity: 0.4; }
+        .card-club .artist-tag { color: var(--terracotta) !important; font-weight: 800; }
+        .card-club .artist-photo img {
+            filter: sepia(0%) contrast(1.2) brightness(0.85) !important; /* Più contrastato, meno vintage */
+        }
+        .card-club .artist-photo::after {
+            background: linear-gradient(to bottom, transparent 30%, var(--espresso) 100%) !important;
+        }
         .section-head { text-align: center; margin-bottom: 50px; position: relative; z-index: 1; }
         .section-head h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 7vw, 3.4rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; margin: 14px 0 0; }
         .artist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; position: relative; z-index: 1; }
@@ -429,6 +457,7 @@
     </svg>
 </div>
 
+    
 <section id="artisti" class="section-artists">
     <div class="bg" id="artists-bg"></div>
     <div class="section-head">
@@ -439,32 +468,34 @@
         <h2>Who We Are</h2>
     </div>
     <div class="artist-grid">
-        <div class="artist-card">
-            <span class="artist-num">No. 01</span>
+        <div class="artist-card card-warmup">
+            <span class="artist-num">Fase 01</span>
             <div class="artist-photo"><img src="ale_und_ori.jpeg" alt="Ale und Ori" loading="lazy"></div>
             <div class="artist-info">
-                <span class="artist-tag">Live Music · Duo</span>
+                <span class="artist-tag">16:00 · Afternoon Warmup</span>
                 <h3>Ale und Ori</h3>
-                <p>Guitar and vocals for an acoustic journey through the great Italian classics. Live music that smells of love and nostalgia.</p>
+                <p>Guitar and vocals for an acoustic journey through the great Italian classics. Live music that smells of love and nostalgia to set the afternoon mood.</p>
                 <a href="https://www.instagram.com/aleundori/" class="ig-btn">@aleundori →</a>
             </div>
         </div>
-        <div class="artist-card">
-            <span class="artist-num">No. 02</span>
+
+        <div class="artist-card card-groove">
+            <span class="artist-num">Fase 02</span>
             <div class="artist-photo"><img src="disco_kiosco.jpeg" alt="Disco Kiosco" loading="lazy"></div>
             <div class="artist-info">
-                <span class="artist-tag">DJ Duo · Italian Funk</span>
+                <span class="artist-tag">18:00 · Sunset Groove</span>
                 <h3>Disco Kiosco</h3>
-                <p>A relentless dig through Italian folk funk. High-energy sets made to move even the harbour stones.</p>
+                <p>A relentless dig through Italian folk funk. The tempo rises, drinks are poured, and high-energy sets are made to move the crowd as the sun begins to dip.</p>
             </div>
         </div>
-        <div class="artist-card">
-            <span class="artist-num">No. 03</span>
+
+        <div class="artist-card card-club">
+            <span class="artist-num">Fase 03</span>
             <div class="artist-photo"><img src="gab.jpeg" alt="GAB" loading="lazy"></div>
             <div class="artist-info">
-                <span class="artist-tag">Solo DJ · Beat &amp; Groove</span>
+                <span class="artist-tag">20:00 · Night Club</span>
                 <h3>GABA</h3>
-                <p>Taking the Italian groove and wiring it with modern beats. GABA controls the tension and pulls the trigger the second the room is ready to explode.</p>
+                <p>Taking the Italian groove and wiring it with modern beats. GABA controls the tension and pulls the trigger the second the room is ready to explode into a proper dancefloor.</p>
             </div>
         </div>
     </div>
