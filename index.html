@@ -110,11 +110,38 @@
             color: var(--rame); opacity: 0.78;
             max-width: 480px; margin: 0 auto; line-height: 1.75;
         }
-        .hero-sub {
+        /* .hero-sub {
             font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase;
             color: var(--rame); margin-top: 14px; font-weight: 500;
         }
 
+        /* Animazione per l'insegna che funziona male */ */
+        @keyframes faulty-neon {
+            0%, 10%, 12%, 14%, 30%, 32%, 100% { 
+                opacity: 1; 
+                text-shadow: none;
+            }
+            11%, 13% { 
+                opacity: 0.1; /* Spegnimento quasi totale */
+            }
+            31% { 
+                opacity: 0.4; /* Sfarfallio a mezza luce */
+                text-shadow: 0 0 8px var(--terracotta); /* Piccolo bagliore rosso quando "scintilla" */
+            }
+        }
+        
+        /* Applichiamo l'animazione al sottotitolo */
+        .hero-sub {
+            font-size: 0.72rem; 
+            letter-spacing: 0.32em; 
+            text-transform: uppercase;
+            color: var(--rame); 
+            margin-top: 14px; 
+            font-weight: 500;
+            /* Aggiunta dell'animazione: dura 6 secondi e si ripete all'infinito */
+            animation: faulty-neon 6s linear infinite;
+        }
+        
         /* ── CONCEPT ── */
         .section-concept { background: var(--espresso); color: var(--cream); padding: 80px 6% 90px; text-align: center; position: relative; overflow: hidden; }
         .concept-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
