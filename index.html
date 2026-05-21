@@ -233,8 +233,10 @@
 
         /* Vinyl spin */
         @keyframes vinyl-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .vinyl-rotate { animation: vinyl-spin 8s linear infinite; transform-origin: center; }
-
+        .vinyl-rotate { 
+            animation: vinyl-spin 8s linear infinite; 
+            transform-origin: 100px 100px; /* Coordinate esatte del centro dell'SVG */
+        }
         /* ── MOBILE BREAKPOINTS ── */
         @media (max-width: 768px) {
             /* Nav */
